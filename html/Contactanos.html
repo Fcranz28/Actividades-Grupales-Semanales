@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - La Casa del Tornillo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../img/logo.png" alt="La Casa del Tornillo" height="40" width="40" class="logo-estilizado me-2">
+                <span>La Casa del Tornillo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contactanos.html">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="contact-container">
+                    <div class="contact-header">
+                        <h1 class="mb-3">Contáctanos</h1>
+                        <p class="mb-0">Estamos aquí para ayudarte. ¡Envíanos tu mensaje!</p>
+                    </div>
+                    
+                    <div class="row p-4">
+                        <div class="col-md-7">
+                            <div class="contact-form">
+                                <form id="contactForm" action="#" method="post">
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                                        <label for="nombre"><i class="fas fa-user me-2"></i>Nombre completo</label>
+                                    </div>
+                                    
+                                    <div class="form-floating mb-4">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
+                                        <label for="email"><i class="fas fa-envelope me-2"></i>Correo electrónico</label>
+                                    </div>
+                                    
+                                    <div class="form-floating mb-4">
+                                        <select class="form-select" id="asunto" name="asunto" required>
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="consulta">Consulta general</option>
+                                            <option value="producto">Información de producto</option>
+                                            <option value="servicio">Servicio al cliente</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                        <label for="asunto"><i class="fas fa-tag me-2"></i>Asunto</label>
+                                    </div>
+                                    
+                                    <div class="form-floating mb-4">
+                                        <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Tu mensaje" style="height: 150px" required></textarea>
+                                        <label for="mensaje"><i class="fas fa-comment me-2"></i>Mensaje</label>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary btn-submit w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>Enviar mensaje
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-5">
+                            <div class="contact-info">
+                                <h4 class="mb-4"><i class="fas fa-info-circle me-2"></i>Información de contacto</h4>
+                                
+                                <div class="contact-info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <h6 class="mb-0">Dirección</h6>
+                                        <p class="mb-0">Sector Angostura km. 10, Cusco 08000</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <h6 class="mb-0">Teléfono</h6>
+                                        <p class="mb-0">084 480070</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <h6 class="mb-0">Email</h6>
+                                        <p class="mb-0">esto_es_una_prueba@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <h6 class="mb-0">Horario de atención</h6>
+                                        <p class="mb-0">Lun - Sáb: 9:00 AM - 7:00 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="social-links mt-4">
+                                    <h6 class="mb-3">Síguenos en redes sociales</h6>
+                                    <div class="d-flex gap-3">
+                                        <a href="#" class="social-icon facebook">
+                                            <img src="../img/facebook.png" alt="Facebook" class="social-img">
+                                        </a>
+                                        <a href="#" class="social-icon instagram">
+                                            <img src="../img/instagram.png" alt="Instagram" class="social-img">
+                                        </a>
+                                        <a href="#" class="social-icon twitter">
+                                            <img src="../img/logotipos.png" alt="Twitter" class="social-img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            Swal.fire({
+                icon: 'success',
+                title: '¡Mensaje enviado!',
+                text: 'Nos pondremos en contacto contigo pronto.',
+                confirmButtonColor: '#2962ff'
+            });
+            this.reset();
+        });
+    </script>
+</body>
+</html>

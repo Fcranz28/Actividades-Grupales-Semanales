@@ -582,6 +582,102 @@ ul{
     background: linear-gradient(45deg, #1da1f2, #0d8bd9);
 }
 
+.glitch-effect {
+  position: relative;
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  animation: glow 2s ease-in-out infinite alternate;
+  background: #2d3436;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #0073e6;
+  }
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2d3436;
+  padding: 20px;
+}
+
+.glitch-effect::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff3f34;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch-effect::after {
+  left: -2px;
+  text-shadow: -2px 0 #00a8ff;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  5% { clip: rect(12px, 9999px, 59px, 0); }
+  10% { clip: rect(48px, 9999px, 29px, 0); }
+  15% { clip: rect(42px, 9999px, 73px, 0); }
+  20% { clip: rect(63px, 9999px, 27px, 0); }
+  25% { clip: rect(34px, 9999px, 55px, 0); }
+  30% { clip: rect(86px, 9999px, 73px, 0); }
+  35% { clip: rect(20px, 9999px, 20px, 0); }
+  40% { clip: rect(26px, 9999px, 60px, 0); }
+  45% { clip: rect(25px, 9999px, 66px, 0); }
+  50% { clip: rect(57px, 9999px, 98px, 0); }
+  55% { clip: rect(5px, 9999px, 46px, 0); }
+  60% { clip: rect(82px, 9999px, 31px, 0); }
+  65% { clip: rect(54px, 9999px, 27px, 0); }
+  70% { clip: rect(28px, 9999px, 99px, 0); }
+  75% { clip: rect(45px, 9999px, 69px, 0); }
+  80% { clip: rect(23px, 9999px, 85px, 0); }
+  85% { clip: rect(54px, 9999px, 84px, 0); }
+  90% { clip: rect(45px, 9999px, 47px, 0); }
+  95% { clip: rect(37px, 9999px, 20px, 0); }
+  100% { clip: rect(4px, 9999px, 91px, 0); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(65px, 9999px, 65px, 0); }
+  5% { clip: rect(52px, 9999px, 77px, 0); }
+  10% { clip: rect(28px, 9999px, 94px, 0); }
+  15% { clip: rect(23px, 9999px, 68px, 0); }
+  20% { clip: rect(38px, 9999px, 43px, 0); }
+  25% { clip: rect(86px, 9999px, 32px, 0); }
+  30% { clip: rect(38px, 9999px, 94px, 0); }
+  35% { clip: rect(67px, 9999px, 36px, 0); }
+  40% { clip: rect(24px, 9999px, 23px, 0); }
+  45% { clip: rect(75px, 9999px, 61px, 0); }
+  50% { clip: rect(26px, 9999px, 79px, 0); }
+  55% { clip: rect(89px, 9999px, 38px, 0); }
+  60% { clip: rect(48px, 9999px, 57px, 0); }
+  65% { clip: rect(46px, 9999px, 76px, 0); }
+  70% { clip: rect(72px, 9999px, 42px, 0); }
+  75% { clip: rect(37px, 9999px, 72px, 0); }
+  80% { clip: rect(95px, 9999px, 35px, 0); }
+  85% { clip: rect(54px, 9999px, 89px, 0); }
+  90% { clip: rect(23px, 9999px, 70px, 0); }
+  95% { clip: rect(57px, 9999px, 45px, 0); }
+  100% { clip: rect(38px, 9999px, 53px, 0); }
+}
+
 @media (max-width: 991.98px) {
     .navbar-nav {
         padding: 1rem 0;
@@ -594,4 +690,70 @@ ul{
     .navbar .form-control {
         margin: 1rem 0;
     }
+}
+
+.console-container {
+    background: #1a1a1a;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+}
+
+.console {
+    color: #00ff00;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.console .line {
+    margin: 0;
+    white-space: nowrap;
+    animation: typing 2s steps(30, end);
+    overflow: hidden;
+}
+
+.console .line:nth-child(1) { animation-delay: 0s; }
+.console .line:nth-child(2) { animation-delay: 2s; }
+.console .line:nth-child(3) { animation-delay: 3s; }
+.console .line:nth-child(4) { animation-delay: 4s; }
+.console .line:nth-child(5) { animation-delay: 5s; }
+.console .line:nth-child(6) { animation-delay: 6s; }
+.console .line:nth-child(7) { animation-delay: 7s; }
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.console .line::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #00ff00;
+    border-radius: 50%;
+    margin-right: 8px;
+    opacity: 0.5;
+}
+
+/* Ajuste específico para el footer */
+footer .console-container {
+    background-color: #1a1a1a !important;
+    color: #00ff00 !important;
+}
+
+footer .console .line {
+    color: #00ff00 !important;
 }

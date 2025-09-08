@@ -60,7 +60,8 @@
 }
 
 .producto:hover .card {
-   transform: rotateY(180deg);
+   transform: translateY(-4px) scale(1.02);
+   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .producto .card-front,

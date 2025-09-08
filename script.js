@@ -226,3 +226,52 @@ document.addEventListener('DOMContentLoaded', () => {
    // Inicializar carrito
    actualizarCarrito();
 });
+
+function pagarCarrito() {
+   if (carrito.length === 0) {
+      Swal.fire({
+         icon: "warning",
+         title: "Carrito vacío",
+         text: "Agrega productos antes de pagar."
+      });
+      return;
+   }
+
+   Swal.fire({
+      title: "Finalizar Compra",
+      html: `
+         <input type="text" id="nombre" class="swal2-input" placeholder="Nombre completo">
+         <input type="text" id="tarjeta" class="swal2-input" placeholder="Número de tarjeta">
+         <input type="text" id="cvv" class="swal2-input" placeholder="CVV">
+      `,
+      confirmButtonText: "Pagar",
+      showCancelButton: true,
+      cancelButtonText: "Cancelar",
+      preConfirm: () => {
+         const nombre = document.getElementById("nombre").value;
+         const tarjeta = document.getElementById("tarjeta").value;
+         const cvv = document.getElementById("cvv").value;
+
+         if (!nombre || !tarjeta || !cvv) {
+            Swal.showValidationMessage("Por favor completa todos los campos");
+            return false;
+         }
+
+         return { nombre, tarjeta, cvv };
+      }
+   }).then((result) => {
+      if (result.isConfirmed) {
+         Swal.fire({
+            icon: "success",
+            title: "Pago exitoso",
+            text: `Gracias por tu compra, ${result.value.nombre}. Tu pedido está en camino.`,
+         });
+
+         // Vaciar carrito después de pagar
+         vaciarCarrito();
+      }
+   });
+}
+
+
+document.getElementById("btnPagar").addEventListener("click", pagarCarrito);
